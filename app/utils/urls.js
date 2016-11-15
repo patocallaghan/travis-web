@@ -2,7 +2,7 @@
 import config from 'travis/config/environment';
 
 var ccXml, email, githubAdmin, githubCommit, githubNetwork, githubPullRequest,
-  githubRepo, githubWatchers, gravatarImage, plainTextLog, statusImage;
+  githubRepo, githubWatchers, gravatarImage, plainTextLog, statusImage, githubBranch;
 
 plainTextLog = function (id) {
   return config.apiEndpoint + '/jobs/' + id + '/log.txt?deansi=true';
@@ -30,6 +30,10 @@ githubNetwork = function (slug) {
 
 githubAdmin = function (slug) {
   return config.sourceEndpoint + '/' + slug + '/settings/hooks#travis_minibucket';
+};
+
+githubBranch = function (slug, branch) {
+  return config.sourceEndpoint + '/' + slug + '/tree/' + branch;
 };
 
 statusImage = function (slug, branch) {
@@ -80,6 +84,7 @@ export {
   githubWatchers,
   githubNetwork,
   githubAdmin,
+  githubBranch,
   statusImage,
   ccXml,
   email,
