@@ -3,7 +3,7 @@ language: node_js
 node_js: 5
 
 env:
-  - EMBER_VERSION=default
+  - PERCY_ENABLE=0 EMBER_VERSION=default
   - PERCY_ENABLE=0 EMBER_VERSION=beta
   - PERCY_ENABLE=0 EMBER_VERSION=canary
 
