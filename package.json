@@ -10,7 +10,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test --reporter dot"
+    "test": "ember exam --split=9 --parallel"
   },
   "repository": "",
   "engines": {
@@ -32,8 +32,6 @@
     "ember-cli-autoprefixer": "^0.6.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-dependency-checker": "^1.3.0",
-    "ember-cli-deploy": "0.6.4",
-    "ember-cli-deploy-lightning-pack": "0.6.8",
     "ember-cli-deprecation-workflow": "0.2.3",
     "ember-cli-document-title": "0.3.3",
     "ember-cli-eslint": "3.0.0",
@@ -65,5 +63,8 @@
     "emberx-select": "2.2.2",
     "loader.js": "^4.0.10",
     "visibilityjs": "^1.2.4"
+  },
+  "dependencies": {
+    "ember-exam": "^0.5.2"
   }
 }
